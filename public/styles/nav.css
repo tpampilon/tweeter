@@ -1,0 +1,19 @@
+/* Navigation Bar */
+
+nav {
+  margin: 0;
+  background-color: #4056A1;
+  font-family: 'bungee', sans-serif;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dropdownnav {
+  margin: 1.5em;
+  font-family: 'source sans pro', sans-serif;
+}
+
+.logo {
+  margin: 1.5em;
+}

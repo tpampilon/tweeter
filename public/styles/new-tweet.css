@@ -1,0 +1,27 @@
+/* New tweet */
+
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'source sans pro', sans-serif;
+}
+
+.h2Title {
+  align-self: center;
+}
+
+.humForm {
+  display: flex;
+  justify-content: space-between;
+}
+
+.counter {
+  font-family: 'bungee', sans-serif;
+}
+
+button {
+  background-color: #4056A1;
+  font-family: 'bungee', sans-serif;
+  color: #FFFFFF;
+}
