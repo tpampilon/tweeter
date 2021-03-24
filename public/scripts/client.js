@@ -4,45 +4,17 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
 */
 
-// Test / driver code (temporary). Eventually will get this from the server.
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
-
 $(document).ready(function() {
   
+  // loops through tweets and takes return value and appends it to the tweets container
   const renderTweets = function(tweets) {
     let $tweetUser = '';
     
-    // loops through tweets
     for (const tweet in tweets) {
       $tweetUser = createTweetElement(tweets[tweet]);
       $('#tweets-container').append($tweetUser);
     }
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
-  }
+  };
 
   // creates an HTML markup to be appended to #tweets-container ID
   const createTweetElement = function(data) {
@@ -70,6 +42,61 @@ $(document).ready(function() {
     return newTweet;
   };
 
-  renderTweets(data);
+  // Event handler that listens to tweet submissions
+  $('form').on('submit', function() {
+    event.preventDefault();
+
+    if ($('textarea').val() === '') {
+      return alert("Tweets cannot be empty");
+    }
+    if ($('textarea').val().length > 140 ) {
+      return alert("Tweets cannot be longer than 140 characters");
+    }
+
+    $.ajax({
+      url: '/tweets',
+      dataType: 'text',
+      method: "POST",
+      data: $('textarea').serialize()
+    }).then((result) => {
+      loadLatestTweets();
+    }).catch(err => {
+      console.log('ajax error occured');
+      console.log(err);
+    });
+  
+  });
+
+  // Function that fetches data from the /tweets url
+  const loadTweets = function() {
+
+    $.ajax({
+      url: '/tweets',
+      method: "GET"
+    }).then((result) => {
+      renderTweets(result);
+    }).catch(err => {
+      console.log('ajax error occured');
+      console.log(err);
+    });
+  }
+
+  // Uses Ajax fetches and loads the last entry
+  const loadLatestTweets = function() {
+    let latestResult = []
+
+    $.ajax({
+      url: '/tweets',
+      method: "GET"
+    }).then((result) => {
+      latestResult.push(result[result.length - 1]);
+      renderTweets(latestResult);
+    }).catch(err => {
+      console.log('ajax error occured');
+      console.log(err);
+    });
+  }
+
+  loadTweets();
 
 });

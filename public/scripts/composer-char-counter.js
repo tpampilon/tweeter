@@ -4,7 +4,7 @@ $(document).ready(function() {
   
   $(this).on('input', function() {
     let input = $(this).find('textarea').val().length;
-    const maxCount = $(this).find('#maxCount').val();
+    const maxCount = $(this).find('#max-count').val();
     
     let total = maxCount - input;
 
@@ -17,15 +17,13 @@ $(document).ready(function() {
 
     const currentCount = $(this).find('output').val();
 
-    console.log('triggers change')
-
     if (currentCount < 0) {
-      $('.counter').addClass('redCounter');
-      $('.redCounter').removeClass('counter');
+      $('.counter').addClass('red-counter');
+      $('.red-counter').removeClass('counter');
     }
     if (currentCount >= 0) {
-      $('.counter').removeClass('redCounter');
-      $('.redCounter').addClass('counter');
+      $('.counter').removeClass('red-counter');
+      $('.red-counter').addClass('counter');
     }
 
   });

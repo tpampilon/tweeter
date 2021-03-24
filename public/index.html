@@ -34,9 +34,6 @@
     <!-- Composer Char Counter -->
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
-    <!-- Tweet Hover -->
-    <!-- <script type="text/javascript" src="/scripts/tweet-hover.js"></script> -->
-
   </head>
 
   <body>
@@ -60,14 +57,13 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2 class="h2Title">Compose Tweet</h2>
+        <h2 class="h2-title">Compose Tweet</h2>
         <form method="POST" action="/tweets">
-          <!-- <label for="tweet-text"></label> -->
           <textarea placeholder="What are you humming about?" name="text" id="tweet-text"></textarea>
-          <div class="humForm">
+          <div class="hum-form">
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
-            <input id="maxCount" type="hidden" value="140">
+            <input id="max-count" type="hidden" value="140">
           </div>
         </form>
       </section>

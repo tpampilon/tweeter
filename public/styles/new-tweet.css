@@ -8,11 +8,11 @@
   margin: auto;
 } 
 
-.h2Title {
+.h2-title {
   align-self: center;
 }
 
-.humForm {
+.hum-form {
   display: flex;
   justify-content: space-between;
 }
@@ -26,7 +26,8 @@
   font-family: 'bungee', sans-serif;
 }
 
-.redCounter{
+.red-counter{
+  font-size: 28px;
   font-family: 'bungee', sans-serif;
   color: red
 }
