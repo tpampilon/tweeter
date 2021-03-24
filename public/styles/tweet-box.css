@@ -11,6 +11,8 @@
   opacity: 0.5;
   padding: 10px;
   margin: auto;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .hoverArticle {
@@ -24,6 +26,8 @@
   box-shadow: 5px 5px;
   padding: 10px;
   margin: auto;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .tweet-header {

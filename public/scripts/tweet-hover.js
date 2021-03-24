@@ -2,20 +2,11 @@
 
 $(document).ready(function() {
   
+  // adds and replaces classes for hovering effect
   $(this).find('.tweet-article').on('mouseover', function() {
-
 
     $('.tweet-article').addClass('hoverArticle');
     $('.hoverArticle').removeClass('tweet-article');
-    
-    // if ($(this).find('.tweet-article').mouseover()) {
-    //   $('.tweet-article').addClass('hoverArticle');
-    //   $('.hoverArticle').removeClass('tweet-article');
-    // }
-   
-    // $('.hoverArticle').removeClass('redCounter');
-    // $('.redCounter').addClass('counter');
-  
 
   });
     
@@ -25,7 +16,5 @@ $(document).ready(function() {
     $('.tweet-article').removeClass('hoverArticle');
   
   });
-
-
 
 });
