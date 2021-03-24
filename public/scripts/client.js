@@ -37,8 +37,6 @@ $(document).ready(function() {
     
     // loops through tweets
     for (const tweet in tweets) {
-      console.log('tweet: ', tweet);
-      console.log('tweets[tweet]: ', tweets[tweet]);
       $tweetUser = createTweetElement(tweets[tweet]);
       $('#tweets-container').append($tweetUser);
     }
@@ -48,12 +46,14 @@ $(document).ready(function() {
 
   // creates an HTML markup to be appended to #tweets-container ID
   const createTweetElement = function(data) {
-    const $newTweet = `
+    const newTweet = `
     <article class="tweet-article">
         <header class="tweet-header">
-          <img src=${data.user.avatars} height="64" width="64">
-          <h5>${data.user.name}</h5>
-          <h5 id="tweetHandle">${data.user.handle}</h5>
+          <div class="img-container">
+            <img class="img-avatar" src=${data.user.avatars}>
+            <h5>${data.user.name}</h5>        
+          </div>  
+          <h5 id="tweet-handle">${data.user.handle}</h5>
         </header>
         <p>${data.content.text}</p>
         <footer class="tweet-footer">
@@ -67,7 +67,7 @@ $(document).ready(function() {
     </article>
     `;
 
-    return $newTweet;
+    return newTweet;
   };
 
   renderTweets(data);
