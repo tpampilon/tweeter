@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   font-family: 'source sans pro', sans-serif;
-}
+} 
 
 .h2Title {
   align-self: center;
@@ -16,8 +16,17 @@
   justify-content: space-between;
 }
 
+#tweet-text {
+  width: 350px;
+}
+
 .counter {
   font-family: 'bungee', sans-serif;
+}
+
+.redCounter{
+  font-family: 'bungee', sans-serif;
+  color: red
 }
 
 button {
