@@ -1,9 +1,9 @@
 /* Header with avatar picture */
 
-header {
+.avatarHeader {
   display: flex;
   font-family: 'source sans pro', sans-serif;
-  height: 400px;
+  height: 600px;
   width: 100%;
   background-color: #ebebeb;
   background-image: url("https://www.transparenttextures.com/patterns/skulls.png");

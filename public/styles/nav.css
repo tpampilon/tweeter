@@ -7,6 +7,9 @@ nav {
   color: #FFFFFF;
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 .dropdownnav {

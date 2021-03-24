@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: center;
   font-family: 'source sans pro', sans-serif;
+  margin: auto;
 } 
 
 .h2Title {

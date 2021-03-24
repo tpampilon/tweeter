@@ -19,6 +19,7 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'source sans pro', sans-serif;
+ 
 }
 
 /*
@@ -30,4 +31,6 @@ body {
   width: 90%;
   background-color:#f4f1ec;
   justify-content: center;
+  top: 100px;
+  margin: auto;
  }
