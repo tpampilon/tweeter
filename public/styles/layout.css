@@ -14,23 +14,41 @@ html {
  * Global layout stuff
  */
 
-body {
+ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'source sans pro', sans-serif;
- 
-}
+  display: flex;
+  flex-direction: row;
+ }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+*/
 
  main {
   display: flex;
   width: 90%;
   background-color:#f4f1ec;
   justify-content: center;
-  top: 100px;
+  height: 350px;
   margin: auto;
+  margin-bottom: -70px;
  }
+
+ /* Wide screen view */
+ @media only screen and (max-width: 768px) {
+  
+  body {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  main {
+    height: 200px;
+    margin-bottom: 0px;
+  }
+
+ }
+ 

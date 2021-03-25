@@ -3,23 +3,24 @@
 .avatarHeader {
   display: flex;
   font-family: 'source sans pro', sans-serif;
-  height: 600px;
-  width: 100%;
+  height: 500px;
+  width: 55%;
   background-color: #ebebeb;
   background-image: url("https://www.transparenttextures.com/patterns/skulls.png");
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: auto;
+  margin-left: 5%;
 }
 
-/* .userAvatar {
-  justify-content: center;
-} */
+/* Wide screen view */
+@media only screen and (max-width: 768px) {
 
-/* .userName {
-  margin-top: 0;
-} */
-
-/* .container {
-  align-content: center;
-} */
+  .avatarHeader {
+    width: 100%;
+    height: 600px;
+    margin-left: 0%;
+  }
+  
+}

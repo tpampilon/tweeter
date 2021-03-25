@@ -34,6 +34,9 @@
     <!-- Composer Char Counter -->
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
+    <!-- Disabling Viewport Zooming -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
   </head>
 
   <body>
@@ -50,31 +53,31 @@
       </div>
       <br>
       <div class="userName">
-        <h2>Your Name</h2>
+        <h2>Ted P</h2>
       </div>
     </header>
     
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <div class="error-empty">⛔ Tweets cannot be empty. ⛔</div>
-        <div class="error-exceed">⛔ 140 character limit reached. ⛔</div>
-        <h2 class="h2-title">Compose Tweet</h2>
-        <form method="POST" action="/tweets">
-          <textarea placeholder="What are you humming about?" name="text" id="tweet-text"></textarea>
-          <div class="hum-form">
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-            <input id="max-count" type="hidden" value="140">
-          </div>
-        </form>
-      </section>
-    </main>
+    <div id="compose-tweetbox">
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <div class="error-empty">⛔ Tweets cannot be empty. ⛔</div>
+          <div class="error-exceed">⛔ 140 character limit reached. ⛔</div>
+          <h2 class="h2-title">Compose Tweet</h2>
+          <form method="POST" action="/tweets">
+            <textarea placeholder="What are you humming about?" name="text" id="tweet-text"></textarea>
+            <div class="hum-form">
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+              <input id="max-count" type="hidden" value="140">
+            </div>
+          </form>
+        </section>
+      </main>
 
-    <!-- Tweet Articles -->
-    
-    <div id="tweets-container"></div>
-
+      <!-- Tweet Articles -->
+      <div id="tweets-container"></div>
+    </div> 
   </body>
 
 </html>

@@ -2,6 +2,7 @@
 
 $(document).ready(function() {
   
+  // changes the output as the user types in their tweet
   $(this).on('input', function() {
     let input = $(this).find('textarea').val().length;
     const maxCount = $(this).find('#max-count').val();
