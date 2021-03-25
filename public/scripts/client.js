@@ -42,15 +42,19 @@ $(document).ready(function() {
     return newTweet;
   };
 
+  // Hides error messages until needed
+  $('.error-empty').hide();
+  $('.error-exceed').hide();
+
   // Event handler that listens to tweet submissions
   $('form').on('submit', function() {
     event.preventDefault();
 
     if ($('textarea').val() === '') {
-      return alert("Tweets cannot be empty");
+      return $('.error-empty').show('slide');
     }
-    if ($('textarea').val().length > 140 ) {
-      return alert("Tweets cannot be longer than 140 characters");
+    if ($('textarea').val().length > 140) {
+      return $('.error-exceed').show('slide');;
     }
 
     $.ajax({
@@ -60,6 +64,8 @@ $(document).ready(function() {
       data: $('textarea').serialize()
     }).then((result) => {
       loadLatestTweets();
+      $('.error-empty').hide('slide');
+      $('.error-exceed').hide('slide');
     }).catch(err => {
       console.log('ajax error occured');
       console.log(err);
@@ -79,11 +85,11 @@ $(document).ready(function() {
       console.log('ajax error occured');
       console.log(err);
     });
-  }
+  };
 
   // Uses Ajax fetches and loads the last entry
   const loadLatestTweets = function() {
-    let latestResult = []
+    let latestResult = [];
 
     $.ajax({
       url: '/tweets',
@@ -95,7 +101,7 @@ $(document).ready(function() {
       console.log('ajax error occured');
       console.log(err);
     });
-  }
+  };
 
   loadTweets();
 

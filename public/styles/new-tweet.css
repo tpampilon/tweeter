@@ -8,6 +8,22 @@
   margin: auto;
 } 
 
+.error-empty {
+	color: #D8000C;
+	background-color: #FFBABA;
+  border-color: #D8000C;
+  border-style: solid;
+  text-align: center;
+}
+
+.error-exceed {
+	color: #D8000C;
+	background-color: #FFBABA;
+  border-color: #D8000C;
+  border-style: solid;
+  text-align: center;
+}
+
 .h2-title {
   align-self: center;
 }

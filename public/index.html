@@ -57,6 +57,8 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <div class="error-empty">⛔ Tweets cannot be empty. ⛔</div>
+        <div class="error-exceed">⛔ 140 character limit reached. ⛔</div>
         <h2 class="h2-title">Compose Tweet</h2>
         <form method="POST" action="/tweets">
           <textarea placeholder="What are you humming about?" name="text" id="tweet-text"></textarea>
