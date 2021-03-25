@@ -18,6 +18,9 @@ $(document).ready(function() {
 
   // creates an HTML markup to be appended to #tweets-container ID
   const createTweetElement = function(data) {
+    const convertedDate = new Date(data.created_at);
+    let newDate = `${convertedDate.getFullYear()}/${convertedDate.getMonth()+1}/${convertedDate.getDate()}`
+    
     const newTweet = `
     <article class="tweet-article">
         <header class="tweet-header">
@@ -29,7 +32,7 @@ $(document).ready(function() {
         </header>
         <p>${data.content.text}</p>
         <footer class="tweet-footer">
-          <div>${data.created_at}</div>
+          <div>${newDate}</div>
           <div class="buttons">
             <div>►</div>
             <div>⇆</div>
@@ -64,6 +67,7 @@ $(document).ready(function() {
       data: $('textarea').serialize()
     }).then((result) => {
       loadLatestTweets();
+      $('textarea').val('');
       $('.error-empty').hide('slide');
       $('.error-exceed').hide('slide');
     }).catch(err => {
