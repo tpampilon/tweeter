@@ -19,16 +19,12 @@ $(document).ready(function() {
 
     if (currentCount < 0) {
       $('.counter').addClass('red-counter');
-      $('.red-counter').removeClass('counter');
     }
     if (currentCount >= 0) {
       $('.counter').removeClass('red-counter');
-      $('.red-counter').addClass('counter');
     }
 
   });
-
-
 
 });
 

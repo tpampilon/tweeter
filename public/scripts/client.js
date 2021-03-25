@@ -31,9 +31,9 @@ $(document).ready(function() {
         <footer class="tweet-footer">
           <div>${data.created_at}</div>
           <div class="buttons">
-            <div>button1</div>
-            <div>button2</div>
-            <div>button3</div>
+            <div>►</div>
+            <div>⇆</div>
+            <div>♥</div>
           </div>
         </footer>
     </article>
