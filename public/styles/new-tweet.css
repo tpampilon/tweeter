@@ -55,4 +55,5 @@ button {
 #tweets-container {
   display: flex;
   flex-flow: column-reverse;
+  z-index: 0;
 }
