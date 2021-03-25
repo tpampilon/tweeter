@@ -51,3 +51,8 @@ button {
   font-family: 'bungee', sans-serif;
   color: #FFFFFF;
 }
+
+#tweets-container {
+  display: flex;
+  flex-flow: column-reverse;
+}

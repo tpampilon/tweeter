@@ -68,6 +68,7 @@ $(document).ready(function() {
     }).then((result) => {
       loadLatestTweets();
       $('textarea').val('');
+      $('.counter').val(140)
       $('.error-empty').hide('slide');
       $('.error-exceed').hide('slide');
     }).catch(err => {
