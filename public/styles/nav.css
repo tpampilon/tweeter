@@ -13,9 +13,13 @@ nav {
   z-index: 100;
 }
 
-.dropdownnav {
+.dropdown-nav {
   margin: 1.5em;
   font-family: 'source sans pro', sans-serif;
+}
+
+.dropdown-nav:hover {
+  background-color: #839df1;
 }
 
 .logo {

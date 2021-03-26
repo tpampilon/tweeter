@@ -14,6 +14,7 @@
   border-color: #D8000C;
   border-style: solid;
   text-align: center;
+  margin-bottom: -25px;
 }
 
 .error-exceed {
@@ -22,6 +23,7 @@
   border-color: #D8000C;
   border-style: solid;
   text-align: center;
+  margin-bottom: -25px;
 }
 
 .h2-title {
@@ -56,4 +58,5 @@ button {
   display: flex;
   flex-flow: column-reverse;
   z-index: 0;
+  margin-top: 20%;
 }

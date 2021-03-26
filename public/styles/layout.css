@@ -34,7 +34,8 @@ html {
   justify-content: center;
   height: 350px;
   margin: auto;
-  margin-bottom: -70px;
+  margin-bottom: -190px;
+  margin-top: 45px;
  }
 
  /* Wide screen view */
@@ -47,7 +48,8 @@ html {
 
   main {
     height: 200px;
-    margin-bottom: 0px;
+    margin-bottom: -120px;
+    margin-top: 0px;
   }
 
  }

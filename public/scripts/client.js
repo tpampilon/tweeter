@@ -5,6 +5,14 @@
 */
 
 $(document).ready(function() {
+
+  // hides the compose bar until needed
+  $('.container').hide();
+
+  // listens for click to reveal the compose bar
+  $('.dropdown-nav').on('click', function() {
+    $('.container').toggle('slide');
+  });
   
   // loops through tweets and takes return value and appends it to the tweets container
   const renderTweets = function(tweets) {
@@ -19,8 +27,8 @@ $(document).ready(function() {
   // creates an HTML markup to be appended to #tweets-container ID
   const createTweetElement = function(data) {
     const convertedDate = new Date(data.created_at);
-    let newDate = `${convertedDate.getFullYear()}/${convertedDate.getMonth()+1}/${convertedDate.getDate()}`
-    
+    let newDate = `${convertedDate.getFullYear()}/${convertedDate.getMonth() + 1}/${convertedDate.getDate()}`;
+
     const newTweet = `
     <article class="tweet-article">
         <header class="tweet-header">
@@ -57,7 +65,7 @@ $(document).ready(function() {
       return $('.error-empty').show('slide');
     }
     if ($('textarea').val().length > 140) {
-      return $('.error-exceed').show('slide');;
+      return $('.error-exceed').show('slide');
     }
 
     $.ajax({
