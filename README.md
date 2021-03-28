@@ -2,7 +2,7 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository was forked and built upon by Ted Pampilon to practice his HTML, CSS, JS, jQuery and AJAX front-end skills, and his Node, Express and MongoDB back-end skills.
+This repository was forked and built upon by Ted Pampilon to practice his HTML, CSS, JS, jQuery and AJAX front-end skills, and his Node and Express skills.
 
 ## Screenshots
 

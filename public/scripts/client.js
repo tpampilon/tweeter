@@ -27,7 +27,7 @@ $(document).ready(function() {
   // creates an HTML markup to be appended to #tweets-container ID
   const createTweetElement = function(data) {
     const convertedDate = new Date(data.created_at);
-    let newDate = `${convertedDate.getFullYear()}/${convertedDate.getMonth() + 1}/${convertedDate.getDate()}`;
+    const newDate = `${convertedDate.getFullYear()}/${convertedDate.getMonth() + 1}/${convertedDate.getDate()}`;
 
     const newTweet = `
     <article class="tweet-article">
@@ -100,9 +100,9 @@ $(document).ready(function() {
     });
   };
 
-  // Uses Ajax fetches and loads the last entry
+  // Uses Ajax to fetch and load the last entry
   const loadLatestTweets = function() {
-    let latestResult = [];
+    const latestResult = [];
 
     $.ajax({
       url: '/tweets',
