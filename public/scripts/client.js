@@ -5,7 +5,7 @@
 */
 
 $(document).ready(function() {
-
+  
   // hides the compose bar until needed
   $('.container').hide();
 
@@ -24,10 +24,44 @@ $(document).ready(function() {
     }
   };
 
+  // Function to check how much has elapsed since the post was created
+  const timeAgo = function(date) {
+    // creates a new date and subtracts the submitted date to it to calculate the seconds
+    let seconds = Math.floor((new Date() - date) / 1000);
+    // devides by how much seconds are in a year
+    let timeBetween = seconds / 31536000;
+  
+    if (timeBetween > 1) {
+      return Math.floor(timeBetween) + " year(s) ago";
+    }
+    // devides by how much seconds are in a month
+    timeBetween = seconds / 2592000;
+    if (timeBetween > 1) {
+      return Math.floor(timeBetween) + " month(s) ago";
+    }
+    // devides by how much seconds are in a day
+    timeBetween = seconds / 86400;
+    if (timeBetween > 1) {
+      return Math.floor(timeBetween) + " day(s) ago";
+    }
+    // devides by how much seconds are in a hour
+    timeBetween = seconds / 3600;
+    if (timeBetween > 1) {
+      return Math.floor(timeBetween) + " hour(s) ago";
+    }
+    // devides by how much seconds are in a minute
+    timeBetween = seconds / 60;
+    if (timeBetween > 1) {
+      return Math.floor(timeBetween) + " minute(s) ago";
+    }
+    // returns the seconds if none of timeBetween is greater than 1
+    return Math.floor(seconds) + " second(s) ago";
+  };
+
   // creates an HTML markup to be appended to #tweets-container ID
   const createTweetElement = function(data) {
     const convertedDate = new Date(data.created_at);
-    const newDate = `${convertedDate.getFullYear()}/${convertedDate.getMonth() + 1}/${convertedDate.getDate()}`;
+    const newDate = timeAgo(convertedDate);
 
     const newTweet = `
     <article class="tweet-article">
