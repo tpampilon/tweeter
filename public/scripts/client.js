@@ -25,7 +25,7 @@ $(document).ready(function() {
     }
   };
 
-  // Function to check how much time has elapsed since the post was created
+  // function to check how much time has elapsed since the post was created
   const timeAgo = function(date) {
     // creates a new date and subtracts the submitted date to it to calculate the seconds
     let seconds = Math.floor((new Date() - date) / 1000);
@@ -100,9 +100,11 @@ $(document).ready(function() {
     event.preventDefault();
 
     if ($('textarea').val() === '') {
+      $('.error-exceed').hide();
       return $('.error-empty').show('slide');
     }
     if ($('textarea').val().length > 140) {
+      $('.error-empty').hide();
       return $('.error-exceed').show('slide');
     }
 
