@@ -12,6 +12,7 @@ $(document).ready(function() {
   // listens for click to reveal the compose bar
   $('.dropdown-nav').on('click', function() {
     $('.container').toggle('slide');
+    $('textarea').trigger('focus');
   });
   
   // loops through tweets and takes return value and appends it to the tweets container
