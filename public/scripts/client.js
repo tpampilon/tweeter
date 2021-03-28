@@ -28,7 +28,7 @@ $(document).ready(function() {
   // function to check how much time has elapsed since the post was created
   const timeAgo = function(date) {
     // creates a new date and subtracts the submitted date to it to calculate the seconds
-    let seconds = Math.floor((new Date() - date) / 1000);
+    const seconds = Math.floor((new Date() - date) / 1000);
     // devides by how much seconds are in a year
     let timeBetween = seconds / 31536000;
   
